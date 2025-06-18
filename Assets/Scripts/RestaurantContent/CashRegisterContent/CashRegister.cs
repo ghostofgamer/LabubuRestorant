@@ -27,7 +27,6 @@ namespace RestaurantContent.CashRegisterContent
         [SerializeField] private Wallet _wallet;
         [SerializeField] private PriceOrderCounter _priceOrderCounter;
         
-        private Client _currentClient;
         private Coroutine _coroutine;
         private DollarValue _currentGivingValue;
         private DollarValue _currentChangeValue;
@@ -40,6 +39,8 @@ namespace RestaurantContent.CashRegisterContent
 
         public event Action<DollarValue> GivingValueChanged; 
 
+        public Client СurrentClient { get; private set; }
+        
         public Transform ClientPosition => _clientPosition;
 
         private void OnEnable()
@@ -54,8 +55,8 @@ namespace RestaurantContent.CashRegisterContent
 
         public void SetClient(Client client)
         {
-            _currentClient = client;
-            SetCanvasActive(_currentClient != null);
+            СurrentClient = client;
+            SetCanvasActive(СurrentClient != null);
             _currentChangeValue = _priceOrderCounter.GetChange(client.PriceOrder, client.Cash);
             // _canvas.SetActive(_currentClient != null);
         }
@@ -67,7 +68,7 @@ namespace RestaurantContent.CashRegisterContent
             if (playerInteraction.CurrentDraggable != null || playerInteraction.PlayerTray.IsActive)
                 return;
 
-            if (_currentClient == null)
+            if (СurrentClient == null)
                 return;
             
             
@@ -81,10 +82,10 @@ namespace RestaurantContent.CashRegisterContent
             
             
 
-            CashRegisterAssemblyBeginig?.Invoke(_currentClient.IsCard);
+            CashRegisterAssemblyBeginig?.Invoke(СurrentClient.IsCard);
             _cameraPositionChanger.ChangePosition(_cameraCurrentPosition);
             _currentGivingValue = new DollarValue(0, 0);
-            _cashRegisterViewer.Init(_currentClient, _currentGivingValue);
+            _cashRegisterViewer.Init(СurrentClient, _currentGivingValue);
         }
 
         public void SetCanvasActive(bool value)
@@ -95,7 +96,7 @@ namespace RestaurantContent.CashRegisterContent
         [ContextMenu("AcceptOrder")]
         public void AcceptOrder()
         {
-            if (_currentClient == null)
+            if (СurrentClient == null)
                 return;
             
             if (_currentGivingValue.ToTotalCents() != _currentChangeValue.ToTotalCents())
@@ -116,18 +117,18 @@ namespace RestaurantContent.CashRegisterContent
             _coroutine = StartCoroutine(StartAcceptOrder());*/
             SoundPlayer.Instance.PlayCashRegister();
             CashRegisterOrderCompleted?.Invoke();
-            _currentClient.Paid();
-            _wallet.Add(_currentClient.PriceOrder);
-            Client client = _currentClient;
-            _currentClient = null;
-            SetCanvasActive(_currentClient != null);
+            СurrentClient.Paid();
+            _wallet.Add(СurrentClient.PriceOrder);
+            Client client = СurrentClient;
+            СurrentClient = null;
+            SetCanvasActive(СurrentClient != null);
             _restaurant.AcceptOrder(client.Order, client);
             ClearGivingValue();
         }
 
         public void AcceptCardOrder()
         {
-            if (_currentClient == null)
+            if (СurrentClient == null)
                 return;
             
             if (_tutorial.CurrentType == TutorialType.TakeFirstOrder)
@@ -135,11 +136,11 @@ namespace RestaurantContent.CashRegisterContent
             
             SoundPlayer.Instance.PlayCashRegister();
             CashRegisterOrderCompleted?.Invoke();
-            _currentClient.Paid();
-            _wallet.Add(_currentClient.PriceOrder);
-            Client client = _currentClient;
-            _currentClient = null;
-            SetCanvasActive(_currentClient != null);
+            СurrentClient.Paid();
+            _wallet.Add(СurrentClient.PriceOrder);
+            Client client = СurrentClient;
+            СurrentClient = null;
+            SetCanvasActive(СurrentClient != null);
             _restaurant.AcceptOrder(client.Order, client);
             ClearGivingValue();
         }

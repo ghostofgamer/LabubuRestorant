@@ -242,8 +242,10 @@ namespace ClientsContent
                 _animator.SetBool("Sit", true);
 
                 /*Vector3 position = new Vector3(Table.ClientSitPosition.transform.position.x,
-                    Table.ClientSitPosition.transform.position.y + 3, Table.ClientSitPosition.transform.position.z);*/
-                // transform.position = position;
+                    Table.ClientSitPosition.transform.position.y + 3, Table.ClientSitPosition.transform.position.z);
+                
+                transform.position = position;*/
+                
                 transform.position = Table.ClientSitPosition.transform.position;
                 transform.rotation = Table.ClientSitPosition.transform.rotation;
                 Debug.Log("Жду за столом ");
@@ -288,9 +290,9 @@ namespace ClientsContent
 
             if (!_navMeshAgent.enabled)
             {
-                _navMeshAgent.enabled = true;
                 transform.position = Table.ClientStandPosition.position;
                 transform.rotation = Table.ClientStandPosition.rotation;
+                _navMeshAgent.enabled = true;
             }
 
             if (_animator.GetBool("Sit"))
