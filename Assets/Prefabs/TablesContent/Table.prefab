@@ -131,6 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4485fc5db1d702248b8d7640f38af24f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _tutorial: {fileID: 0}
   _garbagePackages:
   - {fileID: 2647312244811146798}
   - {fileID: 6488263326350778841}
@@ -352,6 +353,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 62ce3cc010498d24692552aefab40c65, type: 2}
+    - target: {fileID: 2300000, guid: 7fc59931c4eea6745b836678598274e6, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4d4c8aace2bea6246af2d991952c55d9, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
