@@ -119,7 +119,7 @@ namespace ClientsContent
 
             SetDestination(tray.transform.position, () =>
             {
-                // Debug.Log("Дошенл до подноса ");
+                Debug.Log("Дошенл до подноса ");
                 GoToTableWithTray(tray);
             });
         }
@@ -240,6 +240,10 @@ namespace ClientsContent
             {
                 _navMeshAgent.enabled = false;
                 _animator.SetBool("Sit", true);
+
+                /*Vector3 position = new Vector3(Table.ClientSitPosition.transform.position.x,
+                    Table.ClientSitPosition.transform.position.y + 3, Table.ClientSitPosition.transform.position.z);*/
+                // transform.position = position;
                 transform.position = Table.ClientSitPosition.transform.position;
                 transform.rotation = Table.ClientSitPosition.transform.rotation;
                 Debug.Log("Жду за столом ");
