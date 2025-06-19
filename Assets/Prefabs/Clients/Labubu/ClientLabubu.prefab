@@ -56,6 +56,7 @@ MonoBehaviour:
   _cashRegister: {fileID: 0}
   _trayPositionHand: {fileID: 4865514046381264116}
   _clientCollider: {fileID: 2164553588807155492}
+  _clientRenderer: {fileID: 9145430767489331798}
 --- !u!195 &4905594581173152417
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -235,6 +236,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1916961654024868028, guid: c4f67aa189f2cdf45a6be3f91dc69734, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5feb2986042ce1b48aaeb6ad2f9f13b0, type: 2}
     - target: {fileID: 919132149155446097, guid: c4f67aa189f2cdf45a6be3f91dc69734, type: 3}
       propertyPath: m_Name
       value: LabubuRoblox
@@ -277,5 +282,10 @@ Animator:
 --- !u!4 &2018795850705222393 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c4f67aa189f2cdf45a6be3f91dc69734, type: 3}
+  m_PrefabInstance: {fileID: 1985679912763940114}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &9145430767489331798 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -1916961654024868028, guid: c4f67aa189f2cdf45a6be3f91dc69734, type: 3}
   m_PrefabInstance: {fileID: 1985679912763940114}
   m_PrefabAsset: {fileID: 0}

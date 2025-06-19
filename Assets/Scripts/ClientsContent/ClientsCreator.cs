@@ -43,6 +43,8 @@ namespace ClientsContent
         [SerializeField] private OpenCloseRestaurant _openCloseRestaurant;
         [SerializeField] private ClientsCounter _clientsCounter;
 
+        [SerializeField] private Texture[] _textures;
+
         private float _elapsedTime;
         private float _nextSpawnTime = 0f;
         private bool _isNightTime;
@@ -101,8 +103,8 @@ namespace ClientsContent
 
         private IEnumerator Create()
         {
-             InitClientWalking();
-            
+            InitClientWalking();
+
             /*if (_parking.GetCountFreeParkingPositions() > 0)
             {
                 float randomValue = 1;
@@ -157,7 +159,8 @@ namespace ClientsContent
                 table.SetBusyValue(true);
                 Client client = _clientsSpawner.SpawnRandomClient();
                 client.Init(_orderCreator.CreateOrder(), _restaurant, table, _exitPosition, _cashRegister,
-                    _queueCashRegister, _priceOrderCounter, _clientsCounter);
+                    _queueCashRegister, _priceOrderCounter, _clientsCounter,
+                    _textures[Random.Range(0, _textures.Length)]);
                 ClientCreated?.Invoke();
                 _queueCashRegister.AddClientQueue(client);
                 _clients.Add(client);
@@ -185,7 +188,7 @@ namespace ClientsContent
             table.SetBusyValue(true);
             Client client = _clientsSpawner.SpawnRandomClient();
             client.Init(_orderCreator.CreateOrder(), _restaurant, table, _exitPosition, _cashRegister,
-                _queueCashRegister, _priceOrderCounter, _clientsCounter);
+                _queueCashRegister, _priceOrderCounter, _clientsCounter, _textures[Random.Range(0, _textures.Length)]);
             ClientCreated?.Invoke();
             Debug.Log("Пешком");
             _queueCashRegister.AddClientToQueue(client);

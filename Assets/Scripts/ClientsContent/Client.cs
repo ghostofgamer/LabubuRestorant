@@ -21,6 +21,7 @@ namespace ClientsContent
         [SerializeField] private CashRegister _cashRegister;
         [SerializeField] private Transform _trayPositionHand;
         [SerializeField] private Collider _clientCollider;
+        [SerializeField] private Renderer _clientRenderer;
 
         private PriceOrderCounter _priceOrderCounter;
         private Restaurant _restaurant;
@@ -45,7 +46,7 @@ namespace ClientsContent
 
         public void Init(Order order, Restaurant restaurant, Table table, Transform exitPosition,
             CashRegister cashRegister, QueueCashRegister queueCashRegister, PriceOrderCounter priceOrderCounter,
-            ClientsCounter clientsCounter)
+            ClientsCounter clientsCounter,Texture texture)
         {
             Order = order;
             PriceOrder = priceOrderCounter.GetPriceOrder(Order);
@@ -59,8 +60,13 @@ namespace ClientsContent
             _clientsCounter = clientsCounter;
             _clientsCounter.AddClient(this);
             // _clientCar = null;
+            
+            Material newMaterial = new Material(_clientRenderer.sharedMaterial);
+            newMaterial.mainTexture = texture;
+            _clientRenderer.material = newMaterial;
 
-
+                
+                
             Random random = new Random();
             IsCard = random.Next(2) == 1;
 
