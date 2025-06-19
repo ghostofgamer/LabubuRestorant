@@ -17,7 +17,7 @@ namespace TrafficCity
         private List<ObjectPool<LabubuNPC>> _labubuNPCPools = new List<ObjectPool<LabubuNPC>>();
         private int _activeNPC = 0;
         private WaitForSeconds _waitOneSecond = new WaitForSeconds(1f);
-        private WaitForSeconds _waitFiveSeconds = new WaitForSeconds(35f);
+        private WaitForSeconds _waitFiveSeconds = new WaitForSeconds(3f);
 
         private void Start()
         {
@@ -59,6 +59,7 @@ namespace TrafficCity
             {
                 SetPosition(labubuNPC, spawnPoint);
                 labubuNPC.gameObject.SetActive(true);
+                IncreaseActiveNPC();
             }
         }
 
