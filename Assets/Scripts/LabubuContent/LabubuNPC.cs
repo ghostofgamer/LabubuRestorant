@@ -9,7 +9,8 @@ namespace LabubuContent
         [SerializeField] private NavMeshAgent _navMeshAgent;
         [SerializeField] private Animator _animator;
         [SerializeField] private Renderer _labubuRenderer;
-        
+        [SerializeField] private GameObject[] _accessories;
+
         private NPCTraffic _npcTraffic;
         private Transform[] _points;
         private int _index = 0;
@@ -20,29 +21,31 @@ namespace LabubuContent
             Roam();
         }
 
-        public void Init(GameObject path,NPCTraffic npcTraffic,Texture texture)
+        public void Init(GameObject path, NPCTraffic npcTraffic, Texture texture)
         {
             _npcTraffic = npcTraffic;
-            
+
             Material newMaterial = new Material(_labubuRenderer.sharedMaterial);
             newMaterial.mainTexture = texture;
             _labubuRenderer.material = newMaterial;
-            
+
             _points = new Transform[path.transform.childCount];
 
             for (int i = 0; i < _points.Length; i++)
                 _points[i] = path.transform.GetChild(i);
-        } 
+
+            ChoiceAccessories();
+        }
 
         /*private void Roam()
         {
             if (Vector3.Distance(transform.position, _points[_index].position) < _minDistance)
-                _index = (_index + 1) % _points.Length; 
+                _index = (_index + 1) % _points.Length;
 
             _navMeshAgent.SetDestination(_points[_index].position);
             _animator.SetFloat("Vertical", !_navMeshAgent.isStopped ? 1 : 0);
         }*/
-        
+
         private void Roam()
         {
             if (Vector3.Distance(transform.position, _points[_index].position) < _minDistance)
@@ -59,6 +62,14 @@ namespace LabubuContent
 
             _navMeshAgent.SetDestination(_points[_index].position);
             _animator.SetFloat("Vertical", !_navMeshAgent.isStopped ? 1 : 0);
+        }
+
+        private void ChoiceAccessories()
+        {
+            foreach (var accessory in _accessories)
+                accessory.SetActive(false);
+
+            _accessories[Random.Range(0, _accessories.Length)].SetActive(true);
         }
     }
 }

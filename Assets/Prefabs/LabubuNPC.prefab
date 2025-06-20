@@ -205,9 +205,49 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ef899ee312423646b468dc600a05bf9, type: 3}
+--- !u!1 &1187028774155702337 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 788060189037652752, guid: 2ef899ee312423646b468dc600a05bf9, type: 3}
+  m_PrefabInstance: {fileID: 1915979209319168849}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2883376967804518803 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3644886422420765378, guid: 2ef899ee312423646b468dc600a05bf9, type: 3}
+  m_PrefabInstance: {fileID: 1915979209319168849}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4838323573442048589 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6463722470819612956, guid: 2ef899ee312423646b468dc600a05bf9, type: 3}
+  m_PrefabInstance: {fileID: 1915979209319168849}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5205238326434235674 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5956666217218195019, guid: 2ef899ee312423646b468dc600a05bf9, type: 3}
+  m_PrefabInstance: {fileID: 1915979209319168849}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5241073135034160959 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5920796242120371310, guid: 2ef899ee312423646b468dc600a05bf9, type: 3}
+  m_PrefabInstance: {fileID: 1915979209319168849}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7238467023622945708 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9143116040227258621, guid: 2ef899ee312423646b468dc600a05bf9, type: 3}
+  m_PrefabInstance: {fileID: 1915979209319168849}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7448884953343492489 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9063825850420050648, guid: 2ef899ee312423646b468dc600a05bf9, type: 3}
+  m_PrefabInstance: {fileID: 1915979209319168849}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7872290281508010069 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8622443568000910084, guid: 2ef899ee312423646b468dc600a05bf9, type: 3}
+  m_PrefabInstance: {fileID: 1915979209319168849}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8510976342282817251 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7821594850431989170, guid: 2ef899ee312423646b468dc600a05bf9, type: 3}
   m_PrefabInstance: {fileID: 1915979209319168849}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2030786882660349020
@@ -291,9 +331,24 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89484117b0a00714ba0588598260ca4c, type: 3}
+--- !u!1 &6629895826903061825 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4624302681338994973, guid: 89484117b0a00714ba0588598260ca4c, type: 3}
+  m_PrefabInstance: {fileID: 2030786882660349020}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7255417158708606375 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8691567528564457979, guid: 89484117b0a00714ba0588598260ca4c, type: 3}
+  m_PrefabInstance: {fileID: 2030786882660349020}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7748407239239923544 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8622443568000910084, guid: 89484117b0a00714ba0588598260ca4c, type: 3}
+  m_PrefabInstance: {fileID: 2030786882660349020}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8718436501723731130 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7264541663441510630, guid: 89484117b0a00714ba0588598260ca4c, type: 3}
   m_PrefabInstance: {fileID: 2030786882660349020}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3334420676831791803
@@ -434,6 +489,18 @@ MonoBehaviour:
   _navMeshAgent: {fileID: 7308834482923283842}
   _animator: {fileID: 286558983759807144}
   _labubuRenderer: {fileID: 5414356411948443135}
+  _accessories:
+  - {fileID: 5205238326434235674}
+  - {fileID: 8510976342282817251}
+  - {fileID: 2883376967804518803}
+  - {fileID: 1187028774155702337}
+  - {fileID: 4838323573442048589}
+  - {fileID: 7238467023622945708}
+  - {fileID: 7448884953343492489}
+  - {fileID: 5241073135034160959}
+  - {fileID: 8718436501723731130}
+  - {fileID: 6629895826903061825}
+  - {fileID: 7255417158708606375}
 --- !u!95 &286558983759807144
 Animator:
   serializedVersion: 7
