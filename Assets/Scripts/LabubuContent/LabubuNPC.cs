@@ -10,7 +10,11 @@ namespace LabubuContent
         [SerializeField] private Animator _animator;
         [SerializeField] private Renderer _labubuRenderer;
         [SerializeField] private GameObject[] _accessories;
-
+        [SerializeField] private GameObject[] _bodies;
+        [SerializeField] private GameObject[] _eyes;
+        [SerializeField] private GameObject[] _tails;
+        [SerializeField] private GameObject[] _mounth;
+        
         private NPCTraffic _npcTraffic;
         private Transform[] _points;
         private int _index = 0;
@@ -25,9 +29,9 @@ namespace LabubuContent
         {
             _npcTraffic = npcTraffic;
 
-            Material newMaterial = new Material(_labubuRenderer.sharedMaterial);
+            /*Material newMaterial = new Material(_labubuRenderer.sharedMaterial);
             newMaterial.mainTexture = texture;
-            _labubuRenderer.material = newMaterial;
+            _labubuRenderer.material = newMaterial;*/
 
             _points = new Transform[path.transform.childCount];
 
@@ -35,6 +39,7 @@ namespace LabubuContent
                 _points[i] = path.transform.GetChild(i);
 
             ChoiceAccessories();
+            ChoiceAppearance();
         }
 
         private void Roam()
@@ -61,6 +66,26 @@ namespace LabubuContent
                 accessory.SetActive(false);
 
             _accessories[Random.Range(0, _accessories.Length)].SetActive(true);
+        }
+
+        private void ChoiceAppearance()
+        {
+            foreach (var body in _bodies)
+                body.SetActive(false);
+            
+            foreach (var eyes in _eyes)
+                eyes.SetActive(false);
+            
+            foreach (var tail in _tails)
+                tail.SetActive(false);
+            
+            foreach (var mounth in _mounth)
+                mounth.SetActive(false);
+
+            _bodies[Random.Range(0, _bodies.Length)].SetActive(true);
+            _eyes[Random.Range(0, _eyes.Length)].SetActive(true);
+            _tails[Random.Range(0, _tails.Length)].SetActive(true);
+            _mounth[Random.Range(0, _mounth.Length)].SetActive(true);
         }
     }
 }

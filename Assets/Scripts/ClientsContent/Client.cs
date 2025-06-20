@@ -22,7 +22,8 @@ namespace ClientsContent
         [SerializeField] private Transform _trayPositionHand;
         [SerializeField] private Collider _clientCollider;
         [SerializeField] private Renderer _clientRenderer;
-
+        [SerializeField] private ClientAppearance _clientAppearance;
+        
         private PriceOrderCounter _priceOrderCounter;
         private Restaurant _restaurant;
         private Action<Client> _reachAction;
@@ -61,11 +62,12 @@ namespace ClientsContent
             _clientsCounter.AddClient(this);
             // _clientCar = null;
             
-            Material newMaterial = new Material(_clientRenderer.sharedMaterial);
+            /*Material newMaterial = new Material(_clientRenderer.sharedMaterial);
             newMaterial.mainTexture = texture;
-            _clientRenderer.material = newMaterial;
+            _clientRenderer.material = newMaterial;*/
 
-                
+            _clientAppearance.ChoiceAccessories();
+            _clientAppearance.ChoiceAppearance();
                 
             Random random = new Random();
             IsCard = random.Next(2) == 1;
