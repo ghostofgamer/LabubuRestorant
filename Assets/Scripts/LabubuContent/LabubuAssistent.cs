@@ -8,6 +8,7 @@ namespace LabubuContent
     {
         [SerializeField] private CashRegister _cashRegister;
         [SerializeField] private AudioSource _audioSource;
+        [SerializeField] private AudioClip[] _clips;
 
         private Coroutine _checkCoroutine;
 
@@ -24,9 +25,10 @@ namespace LabubuContent
             while (true)
             {
                 if (_cashRegister.СurrentClient != null)
-                    _audioSource.Play();
+                    _audioSource.PlayOneShot(_clips[Random.Range(0,_clips.Length)]);
+                    // _audioSource.Play();
 
-                yield return new WaitForSeconds(5f);
+                yield return new WaitForSeconds(10f);
             }
         }
     }

@@ -31,7 +31,7 @@ namespace TrafficCity
             StartCoroutine(SpawnNPC());
         }
 
-        private IEnumerator SpawnNPC()
+        protected IEnumerator SpawnNPC()
         {
             while (true)
             {

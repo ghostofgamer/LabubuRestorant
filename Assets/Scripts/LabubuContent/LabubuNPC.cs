@@ -37,15 +37,6 @@ namespace LabubuContent
             ChoiceAccessories();
         }
 
-        /*private void Roam()
-        {
-            if (Vector3.Distance(transform.position, _points[_index].position) < _minDistance)
-                _index = (_index + 1) % _points.Length;
-
-            _navMeshAgent.SetDestination(_points[_index].position);
-            _animator.SetFloat("Vertical", !_navMeshAgent.isStopped ? 1 : 0);
-        }*/
-
         private void Roam()
         {
             if (Vector3.Distance(transform.position, _points[_index].position) < _minDistance)
