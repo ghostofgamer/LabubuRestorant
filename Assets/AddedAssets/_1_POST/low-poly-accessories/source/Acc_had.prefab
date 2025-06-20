@@ -40,6 +40,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8622443568000910084}
     m_Modifications:
+    - target: {fileID: -9117791483827514323, guid: 42a4844d329bd3a4dbb4693d4a4f4a49, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 832eb81b666a7a841922db83767a6e09, type: 2}
+    - target: {fileID: -8854701124158141438, guid: 42a4844d329bd3a4dbb4693d4a4f4a49, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 832eb81b666a7a841922db83767a6e09, type: 2}
     - target: {fileID: -8679921383154817045, guid: 42a4844d329bd3a4dbb4693d4a4f4a49, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -80,6 +88,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8540962402063271774, guid: 42a4844d329bd3a4dbb4693d4a4f4a49, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 832eb81b666a7a841922db83767a6e09, type: 2}
+    - target: {fileID: -6123868735181754140, guid: 42a4844d329bd3a4dbb4693d4a4f4a49, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 832eb81b666a7a841922db83767a6e09, type: 2}
+    - target: {fileID: -5847652401425913418, guid: 42a4844d329bd3a4dbb4693d4a4f4a49, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 832eb81b666a7a841922db83767a6e09, type: 2}
+    - target: {fileID: -4553247532444260768, guid: 42a4844d329bd3a4dbb4693d4a4f4a49, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 832eb81b666a7a841922db83767a6e09, type: 2}
     - target: {fileID: -4425903993071913003, guid: 42a4844d329bd3a4dbb4693d4a4f4a49, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -88,6 +112,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Low Poly Accessories
       objectReference: {fileID: 0}
+    - target: {fileID: 1003657914119446259, guid: 42a4844d329bd3a4dbb4693d4a4f4a49, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 832eb81b666a7a841922db83767a6e09, type: 2}
+    - target: {fileID: 3871818083078945595, guid: 42a4844d329bd3a4dbb4693d4a4f4a49, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 832eb81b666a7a841922db83767a6e09, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: -5752588124522702459, guid: 42a4844d329bd3a4dbb4693d4a4f4a49, type: 3}
