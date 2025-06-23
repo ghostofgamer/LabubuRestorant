@@ -84,6 +84,7 @@ namespace UI.Screens.ShopContent.WorkersContent
             UpdateContent.SetActive(IsOwned);
             _hireButton.SetActive(!IsOwned);
             _dismissButton.SetActive(IsOwned);
+            ValueChanged?.Invoke(Price, Salary);
         }
 
         public void DismissWorker()

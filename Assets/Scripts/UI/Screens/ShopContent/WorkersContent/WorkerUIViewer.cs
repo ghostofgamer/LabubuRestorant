@@ -24,6 +24,9 @@ namespace UI.Screens.ShopContent.WorkersContent
         private void SetValue(DollarValue price, DollarValue salary)
         {
             _priceText.text = $"{LocalizationManager.GetTermTranslation("Price")}:{price}";
+            Debug.Log("Price " + price);
+            Debug.Log("LocalizationManager.GetTermTranslation(\"Price\") " + LocalizationManager.GetTermTranslation("Price"));
+            
             _salaryText.text = $"{LocalizationManager.GetTermTranslation("Salary")}:{salary}";
         }
     }

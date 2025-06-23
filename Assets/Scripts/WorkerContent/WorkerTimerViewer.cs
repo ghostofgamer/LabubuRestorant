@@ -31,7 +31,7 @@ namespace WorkerContent
             
             float fillAmount = elapsedTime / duration;
             _timeFillImage.fillAmount = fillAmount;
-            
+            Debug.Log("_timeFillImage.fillAmount " + _timeFillImage.fillAmount);
             /*if (_isRelax)
         {
             _timerViewText.text = Mathf.CeilToInt(_elapsedTime).ToString("00") + "s";
