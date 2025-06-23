@@ -3914,6 +3914,23 @@ MonoBehaviour:
       - Terus Bermain
       Flags: 0000000000000000000000
       Languages_Touch: []
+    - Term: Download
+      TermType: 0
+      Description: 
+      Languages:
+      - Download
+      - Herunterladen
+      - "T\xE9l\xE9charger"
+      - "\u0421\u043A\u0430\u0447\u0430\u0442\u044C"
+      - Indirmek
+      - "\u30C0\u30A6\u30F3\u30ED\u30FC\u30C9"
+      - Descargar
+      - "Pobiera\u0107"
+      - Scaricamento
+      - Download
+      - Unduh
+      Flags: 0000000000000000000000
+      Languages_Touch: []
     CaseInsensitiveTerms: 0
     OnMissingTranslation: 1
     mTerm_AppName: 

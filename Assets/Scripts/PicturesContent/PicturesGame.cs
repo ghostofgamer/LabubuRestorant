@@ -1,6 +1,6 @@
-using System;
 using InteractableContent;
 using PlayerContent;
+using UI.Screens;
 using UnityEngine;
 
 namespace PicturesContent
@@ -8,7 +8,7 @@ namespace PicturesContent
     public class PicturesGame : MonoBehaviour
     {
         [SerializeField] private InteractableObject _interactableObject;
-        [SerializeField] private string _link;
+        [SerializeField] private OurGamesScreen _ourGamesScreen;
 
         private void OnEnable()
         {
@@ -22,7 +22,7 @@ namespace PicturesContent
 
         private void Action(PlayerInteraction playerInteraction)
         {
-            Application.OpenURL(_link);
+            _ourGamesScreen.OpenScreen();
         }
     }
 }
