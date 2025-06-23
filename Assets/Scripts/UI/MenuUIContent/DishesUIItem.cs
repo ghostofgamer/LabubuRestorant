@@ -28,7 +28,8 @@ namespace UI.MenuUIContent
         [SerializeField] private LanguageChanger _languageChanger;
         [SerializeField] private TMP_Text _priceDifferenceText;
         [SerializeField] private Energy _energy;
-
+        [SerializeField] private Button _addMenuButton;
+        
         private bool _isFirstCall = true;
         private int _levelOpened;
         private DollarValue _purchasePrice;
@@ -231,6 +232,22 @@ namespace UI.MenuUIContent
                 _valuePriceState = 0;
 
             _priceDifferenceText.text = _valuePriceState.ToString();
+            
+            if (_valuePriceState > _energy.EnergyValue)
+            {
+                Debug.Log("тут должно стать красным");
+                _priceDifferenceText.color = Color.red;
+                _addMenuButton.interactable = false;
+            }
+            else
+            {
+                Debug.Log("тут должно стать белым");
+                _priceDifferenceText.color = Color.white;
+                _addMenuButton.interactable = true;
+            }
+            
+            
+            
             // Color color = currentCents <= recommendedCents ? _colorGreen : _colorRed;
 
             ChangeCurrentPrice?.Invoke(_currentPrice, _colorGreen);
