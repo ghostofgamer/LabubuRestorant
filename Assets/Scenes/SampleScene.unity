@@ -18443,7 +18443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 481ab606793a67349be805c13febeba0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mTarget: {fileID: 2052985492}
+  mTarget: {fileID: 354121231}
   mAlignment_RTL: 514
   mAlignment_LTR: 514
   mAlignmentWasRTL: 0
@@ -36903,8 +36903,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -4129713225215533191, guid: 66e0ac048a3a0084f9a60b8395d09d78, type: 2}
-  m_audioClip: {fileID: 8300000, guid: bbc11a1311c09d84aa478391da693fc0, type: 3}
-  m_Resource: {fileID: 8300000, guid: bbc11a1311c09d84aa478391da693fc0, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f0f0fc6abb3a81846a83d0389cf53b70, type: 3}
+  m_Resource: {fileID: 8300000, guid: f0f0fc6abb3a81846a83d0389cf53b70, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.3
   m_Pitch: 1
@@ -112028,7 +112028,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 481ab606793a67349be805c13febeba0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mTarget: {fileID: 1780101864}
+  mTarget: {fileID: 1550354266}
   mAlignment_RTL: 514
   mAlignment_LTR: 514
   mAlignmentWasRTL: 0
@@ -135127,6 +135127,17 @@ MonoBehaviour:
   mGUI_ShowCallback: 0
   mLocalizeTarget: {fileID: 1284495765}
   mLocalizeTargetName: I2.Loc.LocalizeTarget_TextMeshPro_UGUI
+--- !u!114 &1550354266 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8995151936801189843, guid: b7968c2c1f51ee44dae9188c655678a5, type: 3}
+  m_PrefabInstance: {fileID: 6315165462675968919}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550354260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1551529773 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4277370288105844351, guid: 1fbfcd755c566e348984c2a5582925b5, type: 3}
@@ -146085,7 +146096,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 481ab606793a67349be805c13febeba0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mTarget: {fileID: 1931629342}
+  mTarget: {fileID: 2084242735}
   mAlignment_RTL: 514
   mAlignment_LTR: 514
   mAlignmentWasRTL: 0
@@ -151315,17 +151326,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1779913728}
   m_CullTransparentMesh: 1
---- !u!114 &1780101864 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6186959021387643190, guid: 2ec2b1f0869d884408818be135504864, type: 3}
-  m_PrefabInstance: {fileID: 1781888492554347993}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1780678005
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -173254,7 +173254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 481ab606793a67349be805c13febeba0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mTarget: {fileID: 739221017}
+  mTarget: {fileID: 2100844224}
   mAlignment_RTL: 258
   mAlignment_LTR: 258
   mAlignmentWasRTL: 0
@@ -175638,17 +175638,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd6e77118b9139743b3ad041d9371b34, type: 3}
---- !u!114 &2052985492 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3708449419165194972, guid: 2ec2b1f0869d884408818be135504864, type: 3}
-  m_PrefabInstance: {fileID: 1781888492554347993}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2053962377
 GameObject:
   m_ObjectHideFlags: 0

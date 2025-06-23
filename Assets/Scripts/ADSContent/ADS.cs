@@ -129,7 +129,7 @@ namespace ADSContent
 
         public void ShowInterstitial()
         {
-            if (MaxSdk.IsInterstitialReady(InterstitialKey))
+            /*if (MaxSdk.IsInterstitialReady(InterstitialKey))
             {
                 AppMetrica.ReportEvent("ShowInterstitial");
                 MaxSdk.ShowInterstitial(InterstitialKey);
@@ -137,7 +137,7 @@ namespace ADSContent
             else
             {
                 LoadInterstitial();
-            }
+            }*/
         }
 
         private IEnumerator ReloadInterstitialAfterDelay(float delay)
@@ -225,11 +225,12 @@ namespace ADSContent
 
         public void ShowRewarded(RewardCallback rewardCallback)
         {
-            if (MaxSdk.IsRewardedAdReady(RewardedKey))
+            
+            /*if (MaxSdk.IsRewardedAdReady(RewardedKey))
             {
                 currentRewardCallback = rewardCallback;
                 MaxSdk.ShowRewardedAd(RewardedKey);
-            }
+            }*/
         }
 
 

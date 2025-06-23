@@ -16,10 +16,10 @@ namespace PromoCodeContent
         public void ActivatePrizePromo()
         {
             AppMetrica.ReportEvent("ActivatePrizePromo");
-            _wallet.Add(new DollarValue(50, 0));
+            _wallet.Add(new DollarValue(150, 0));
             _delivery.SpawnPrize(ItemType.Bun, 2);
             _delivery.SpawnPrize(ItemType.RawCutlet, 2);
-            _delivery.SpawnPrize(ItemType.Cabbage, 2);
+            _delivery.SpawnPrize(ItemType.PackageBurgerPaper, 2);
         }
     }
 }

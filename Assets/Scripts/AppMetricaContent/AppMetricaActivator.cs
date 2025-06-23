@@ -8,7 +8,7 @@ public static class AppMetricaActivator
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     private static void ActivateAppMetrica()
     {
-        AppMetricaConfig appMetricaConfig = new("37618e64-e1c4-4382-9ba2-8c4bdcd79d03")
+        AppMetricaConfig appMetricaConfig = new("566d4876-b865-4b7a-b925-5fd8a6c7f6a0")
         {
             CrashReporting = true,
             SessionTimeout = 10,
